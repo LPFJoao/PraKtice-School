@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Intranet - Chat</title>
+  <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+
+
+  <!-- Fenêtre pop-up du chat -->
+<div id="chat-header">
+  <h2 class="chat-title">Messagerie</h2>
+  <button id="close-chat">✖</button>
+</div>
+
+<div id="chat-subheader">
+  <h3 class="chat-subtitle">Conversations</h3>
+</div>
+
+
+
+    <div id="chat-body">
+      <!-- Liste des conversations -->
+      <div id="chat-users">
+        <!-- Ajout dynamique en JS -->
+      </div>
+
+      <!-- Fenêtre de messages -->
+      <div id="chat-conversation">
+        <div id="chat-messages">
+          <p>Sélectionne une conversation</p>
+        </div>
+        <div id="chat-input-container">
+          <input type="text" id="chat-input" placeholder="Écris un message..." />
+   <button id="chat-send">Envoyer</button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../JS/chat.js"></script>
+</body>
+</html>
