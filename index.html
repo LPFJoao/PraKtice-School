@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>PraKtice</title>
+</head>
+<body>
+
+    <header>
+        <nav id="nav" class="nav">
+        <div class="nav-container">
+          <a href="index.html" class="logo-wrapper">
+            <img
+              class="logo-img"
+              src="assets/pRAKTICE.svg"
+              alt="Open Props logo"
+              width="160"
+              height="29.44"
+            />
+          </a>
+          <div class="menu-wrapper">
+            <div class="mobile-wrapper">
+              <div class="mobile-mobile-head">
+                <a href="#" class="logo-wrapper">
+                  <img
+                    class="logo-img"
+                    src="assets/pRAKTICE.svg"
+                    alt="Open Props logo"
+                    width="160"
+                    height="29.44"
+                  />
+                </a>
+                <button
+                  class="icon-btn"
+                  aria-label="Close Menu"
+                  onclick="nav.classList.remove('open')"
+                >                 
+                </button>
+              </div>
+              <menu class="menu">
+                <!--LlIEN VERS NO point de pages...-->
+                <li><a href="point1.html" class="nav-link">Point1</a></li>
+                <li><a href="point2.html" class="nav-link">Point2</a></li>
+                <li><a href="point3.html" class="nav-link">Point3</a></li>
+                <li><a href="point4.html" class="nav-link">Point4</a></li>
+                <li><a href="point5.html" class="nav-link">Point5</a></li>
+
+              </menu>
+            </div>
+  
+            <div class="actions">
+              <a href="https://github.com/" class="button-link">Se Connecter</a>
+              <a href="#" class="button-link primary">Rejoignez Nous 💡</a>
+            </div>
+          </div>
+  
+          <button
+            class="icon-btn"
+            aria-label="Open Menu"
+            onclick="nav.classList.add('open')"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="currentColor"
+            >
+              <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+      
+    </header>
+    <main>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <p>d</p>
+        <div id="chat-logo"><img src="assets/chat_bubbly_logo.svg" alt="chat_bubbly_logo"></div>
+    </main>
+    <footer>
+        <div id="footer-left">
+           
+            
+
+        </div>
+        <div id="footer-center">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="point1.html">Point1</a></li>
+                <li><a href="point2.html">Point2</a></li>
+                <li><a href="point3.html">Point3</a></li>
+                <li><a href="point4.html">Point4</a></li>
+                <li><a href="point5.html">Point5</a></li>
+            </ul>
+            
+
+        </div>
+        <div id="footer-right">
+
+            <p>© 2025 PraKtice. All rights reserved.</p>
+            <p>Made with ❤️ by PraKtice</p>
+
+        </div>
+        
+    </footer>
+
+    <script src="JS/index.js">
+          function updateChatLogoPosition() {
+        const chatLogo = document.getElementById('chat-logo');
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const bodyHeight = document.body.offsetHeight;
+
+        
+        if (windowHeight + scrollY >= bodyHeight - 5) {
+        chatLogo.style.bottom = '300px';
+        } else {
+        chatLogo.style.bottom = '20px';
+        }
+    }
+
+        window.addEventListener('scroll', updateChatLogoPosition);
+        window.addEventListener('resize', updateChatLogoPosition);
+        document.addEventListener('DOMContentLoaded', updateChatLogoPosition);
+    </script>
+</body>
+</html>
