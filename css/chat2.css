@@ -1,7 +1,7 @@
-/* chat toggle button */
+
 #chat-toggle {
   position: fixed;
-  bottom: 20px;
+  bottom: 200px;
   right: 20px;
   background: #007bff;
   color: #fff;
@@ -16,10 +16,9 @@
   z-index: 1000;
 }
 
-/* the popup container (hidden by default) */
 #chat-popup {
   position: fixed;
-  bottom: 80px;
+  bottom: 250px;
   right: 20px;
   width: 350px;
   height: 450px;

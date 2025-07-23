@@ -267,19 +267,14 @@
 footer {
   width: auto;
   height: 470px; 
-  background-image: url("../assets/footer_image.png");
+  background-image: url("../assets/footer_image.png") ;
+  background-blend-mode: screen;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  color: rgb(0, 0, 0);
-  position: relative;
-  padding-bottom: 35px;
-  padding-left: 20px;
-  padding-right: 20px;
-  
+  align-items: flex-end; 
 }
 
 #footer-right {
@@ -287,6 +282,11 @@ footer {
   flex-direction: column;
   align-items: flex-end;
   gap: 50px;
+  color: rgb(0, 0, 0);
+  position: relative;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 #footer-right img:hover {
@@ -297,5 +297,23 @@ footer {
 
 footer a{
 	text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+footer ul{
+	list-style: none;
 }
 
+#footer-left{
+	color: rgb(255, 255, 255);
+  position: relative;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#footer-center {
+  position: relative;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

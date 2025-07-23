@@ -4,9 +4,9 @@ function updateChatLogoPosition() {
   const windowHeight = window.innerHeight;
   const footerRect = footer.getBoundingClientRect();
 
-  // If the footer is visible in the viewport
+t
   if (footerRect.top < windowHeight) {
-    // Move the chat logo up so it stays above the footer
+
     const overlap = windowHeight - footerRect.top + 20;
     chatLogo.style.bottom = overlap + 'px';
   } else {
@@ -38,9 +38,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// js/chat.js
+
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inject the widget snippet into the page
+
   fetch('/html/chat2.html')
     .then(r => r.text())
     .then(html => {
