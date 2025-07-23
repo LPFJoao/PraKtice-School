@@ -1,46 +1,51 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Intranet - Chat</title>
-  <link rel="stylesheet" href="../css/chat.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/chat.css">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+  />
 </head>
 <body>
-
-
-  <!-- Fenêtre pop-up du chat -->
-<div id="chat-header">
-  <h2 class="chat-title">Messagerie</h2>
-  <button id="close-chat">✖</button>
-</div>
-
-<div id="chat-subheader">
-  <h3 class="chat-subtitle">Conversations</h3>
-</div>
-
-
-
-    <div id="chat-body">
-      <!-- Liste des conversations -->
-      <div id="chat-users">
-        <!-- Ajout dynamique en JS -->
-      </div>
-
-      <!-- Fenêtre de messages -->
-      <div id="chat-conversation">
-        <div id="chat-messages">
-          <p>Sélectionne une conversation</p>
-        </div>
-        <div id="chat-input-container">
-          <input type="text" id="chat-input" placeholder="Écris un message..." />
-   <button id="chat-send">Envoyer</button>
-
-
-        </div>
-      </div>
+            <!-- Bouton de chat flottant -->
+            <div id="chat-toggle" title="Ouvrir le chat">
+                <i class="ph ph-chat"></i>
+            </div>
+    
+            <!-- Pop-up Chat -->
+            <div id="chat-popup">
+  <div class="chat-header">
+    <h2 class="chat-title">Messagerie</h2>
+    <button id="chat-close">✖</button>
+  </div>
+  <div class="chat-body">
+    <div class="chat-list">
+      <!-- Barre de recherche INSÉRÉE ICI -->
+      <input type="text" id="search-conversations" placeholder="Rechercher une conversation..." style="width: 90%; margin: 10px auto 12px auto; padding: 6px 10px; display: block; border-radius: 6px; border: 1px solid #ccc;" />
+      <ul id="conversation-list"></ul>
+    </div>
+    <div class="chat-window">
+      <div id="messages-container"></div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Écris un message..." autocomplete="off" />
+        <button type="submit">Envoyer</button>
+      </form>
     </div>
   </div>
+</div>
 
-  <script src="../JS/chat.js"></script>
+
+            <script src="../JS/chat.js"></script>
+    
 </body>
 </html>
