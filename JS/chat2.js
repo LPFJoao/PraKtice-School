@@ -1,7 +1,6 @@
-// js/chat.js
+
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Inject the widget snippet into the page
-  fetch('/html/chat-widget.html')
+  fetch('../html/chat2.html')
     .then(r => r.text())
     .then(html => {
       document.body.insertAdjacentHTML('beforeend', html);
@@ -17,11 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('chat-form');
     const input = document.getElementById('chat-input');
 
-    // State
+    
     let convos = JSON.parse(localStorage.getItem('convos') || '[]');
     let activeId = null;
 
-    // Helpers
+    
     function save() {
       localStorage.setItem('convos', JSON.stringify(convos));
     }
@@ -53,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       msgsContainer.scrollTop = msgsContainer.scrollHeight;
     }
 
-    // Initial load: if no convos, create a demo one
+    
     if (convos.length === 0) {
       convos.push({
         id: Date.now(),
@@ -71,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderConvos();
     renderMessages();
 
-    // Toggle open/close
+    
     toggle.addEventListener('click', () => {
       popup.classList.toggle('active');
     });
@@ -79,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       popup.classList.remove('active');
     });
 
-    // Sending a message
+    
     form.addEventListener('submit', e => {
       e.preventDefault();
       const text = input.value.trim();
