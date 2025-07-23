@@ -1,0 +1,24 @@
+<div id="chat-toggle"><img src="assets/chat_bubbly_logo.svg" alt="chat_bubbly_logo"></div>
+
+<div id="chat-popup">
+  <div class="chat-header">
+    <span>My Chats</span>
+    <button id="chat-close">×</button>
+  </div>
+  <div class="chat-body">
+    <aside class="chat-list">
+      <ul id="conversation-list">
+        <!-- JS will inject <li data-id="...">Conversation Name</li> -->
+      </ul>
+    </aside>
+    <section class="chat-window">
+      <div id="messages-container">
+        <!-- JS will inject messages here -->
+      </div>
+      <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Type a message…" autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </div>
+</div>

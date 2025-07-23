@@ -1,47 +1,7 @@
-function updateChatLogoPosition() {
-  const chatLogo = document.getElementById('chat-logo');
-  const footer = document.querySelector('footer');
-  const windowHeight = window.innerHeight;
-  const footerRect = footer.getBoundingClientRect();
-
-  // If the footer is visible in the viewport
-  if (footerRect.top < windowHeight) {
-    // Move the chat logo up so it stays above the footer
-    const overlap = windowHeight - footerRect.top + 20;
-    chatLogo.style.bottom = overlap + 'px';
-  } else {
-    chatLogo.style.bottom = '20px';
-  }
-}
-
-window.addEventListener('scroll', updateChatLogoPosition);
-window.addEventListener('resize', updateChatLogoPosition);
-document.addEventListener('DOMContentLoaded', updateChatLogoPosition);
-
-document.addEventListener("DOMContentLoaded", () => {
-  const chatLogo = document.getElementById("chat-logo");
-
-  if (chatLogo) {
-    chatLogo.addEventListener("click", () => {
-      
-      const popupWidth = 600;
-      const popupHeight = 800;
-      const left = (window.innerWidth - popupWidth) / 2;
-      const top = (window.innerHeight - popupHeight) / 2;
-
-      window.open(
-        "html/chat.html",
-        "ChatPopup",
-        `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=yes,scrollbars=yes`
-      );
-    });
-  }
-});
-
 // js/chat.js
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Inject the widget snippet into the page
-  fetch('/html/chat2.html')
+  fetch('/html/chat-widget.html')
     .then(r => r.text())
     .then(html => {
       document.body.insertAdjacentHTML('beforeend', html);

@@ -1,0 +1,128 @@
+/* chat toggle button */
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* the popup container (hidden by default) */
+#chat-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 450px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: none;
+  flex-direction: column;
+  font-family: sans-serif;
+  z-index: 1000;
+}
+
+/* show when .active added */
+#chat-popup.active {
+  display: flex;
+}
+
+/* header */
+.chat-header {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chat-header button {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* body splits into list + window */
+.chat-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+.chat-list {
+  width: 30%;
+  border-right: 1px solid #eee;
+  overflow-y: auto;
+}
+.chat-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.chat-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #fafafa;
+}
+.chat-list li.active {
+  background: #f0f0f0;
+}
+
+/* message window */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+#messages-container {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+.message {
+  margin-bottom: 8px;
+  max-width: 80%;
+  clear: both;
+}
+.message.you {
+  float: left;
+  background: #f1f1f1;
+  padding: 8px;
+  border-radius: 8px;
+}
+.message.me {
+  float: right;
+  background: #007bff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* input area */
+#chat-form {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+#chat-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+#chat-form button {
+  border: none;
+  padding: 0 16px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
