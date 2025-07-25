@@ -24,13 +24,13 @@
     position: fixed;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 1.5rem;
     z-index: 1;
   }
 
   .login-inner {
-    background-image: linear-gradient(to right, #dcdf8c, #5d7137);
+    background-color: #fff;
     border-radius: 20px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     padding: 15px 25px;
@@ -38,9 +38,8 @@
     width: 380px;
   }
 
-  #submitLogin,
-  #closeLogin {
-    background-image: linear-gradient(to right, #dcdf8c, #5d7137);
+  #submitLogin{
+    background-color: var(--c-accent);
     border-radius: 20px;
     border: none;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -50,16 +49,70 @@
     margin: 0 5px;
   }
 
-  #myText,
-  #myText2 {
-    opacity: 0.8;
-    border-radius: 20px;
-    padding: 8px;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-  }
+
+    :root {
+    --c-bg-main: #fff;
+    --c-accent: #5d7137;
+    --c-accent-light: #8fbc8f;
+    --c-accent-dark: #3e4d25;
+    --c-green-light: #eafbe6;
+    --c-beige: #f7f6ef;
+    --c-gray-100: #f5f5f5;
+    --c-gray-200: #e0e0e0;
+    --c-gray-300: #bdbdbd;
+    --c-gray-400: #757575;
+    --c-gray-900: #222;
+    --c-blue-100: #e3f0ff;
+    --c-blue-500: #4a90e2;
+    --c-text-primary: #222;
+    --c-text-secondary: #5d7137;
+    --c-text-tertiary: #757575;
+    --c-white: #fff;
+    --c-danger: #e74c3c;
+    --c-success: #10b981;
+    --c-warning: #f59e0b;
+    --c-purple: #8b5cf6;
+}
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--c-text-secondary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--c-gray-200);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--c-white);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--c-accent);
+            box-shadow: 0 0 0 3px rgba(93, 113, 55, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-switch {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 </style>
   
 
@@ -68,11 +121,15 @@
   <div id="login" class="modal">
     <button id="closeLogin">×</button>
     <div class="login-inner">
-      <h2>PraKtice School</h2>
-      <label for="myText">Username</label><br>
-      <input type="text" id="myText" placeholder=" Enter your username"><br><br>
-      <label for="myText2">Password</label><br>
-      <input type="password" id="myText2" placeholder=" Enter your password"><br><br>
+      <h2>PraKtice School</h2><br><br>
+      <div class="form-group">
+      <label for="myText" class="form-label">Username</label>
+      <input type="text" id="myText" class="form-input" placeholder=" Enter your username"><br><br>
+      </div>
+      <div class="form-group">
+      <label for="myText2" class="form-label">Password</label>
+      <input type="password" id="myText2" class="form-input" placeholder=" Enter your password"><br><br>
+      </div>
       <button id="submitLogin">Login</button>
     </div>
   </div>
