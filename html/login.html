@@ -1,0 +1,80 @@
+
+<div id="login-container">
+    <style>
+
+  #login-container {
+    display: none;
+  }
+
+  #login-container.open {
+    display: block;
+  }
+
+  #login-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    cursor: pointer;
+  }
+
+
+  #login {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    z-index: 1;
+  }
+
+  .login-inner {
+    background-image: linear-gradient(to right, #dcdf8c, #5d7137);
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+  }
+
+  #submitLogin,
+  #closeLogin {
+    background-image: linear-gradient(to right, #dcdf8c, #5d7137);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin: 0 5px;
+  }
+
+  #myText,
+  #myText2 {
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+</style>
+  
+
+  <div id="login-overlay"></div>
+
+  <div id="login" class="modal">
+    <button id="closeLogin">×</button>
+    <div class="login-inner">
+      <h2>PraKtice School</h2>
+      <label for="myText">Username</label><br>
+      <input type="text" id="myText" placeholder=" Enter your username"><br><br>
+      <label for="myText2">Password</label><br>
+      <input type="password" id="myText2" placeholder=" Enter your password"><br><br>
+      <button id="submitLogin">Login</button>
+    </div>
+  </div>
+</div>
+

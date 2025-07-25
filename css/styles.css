@@ -267,20 +267,20 @@
 footer {
   width: auto;
   height: 470px; 
-  background-image: url("../assets/footer_image.png") ;
-  background-blend-mode: screen;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: left;
+  background-image: linear-gradient(to right, #dcdf8c, #5d7137);
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; 
+  margin: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 #footer-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: flex-end;
   gap: 50px;
   color: rgb(0, 0, 0);
   position: relative;
@@ -304,11 +304,19 @@ footer ul{
 }
 
 #footer-left{
-	color: rgb(255, 255, 255);
-  position: relative;
+  background: url('../assets/pRAKTICE\(1\).svg');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  width: 25%;
+  color: rgb(255, 255, 255);
   padding-bottom: 35px;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end
 }
 
 #footer-center {
@@ -316,4 +324,8 @@ footer ul{
   padding-bottom: 35px;
   padding-left: 20px;
   padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
 }

@@ -1,0 +1,88 @@
+<!-- html/register.html -->
+<div id="register-container">
+    <style>
+
+  #register-container {
+    display: none;
+  }
+
+  #register-container.open {
+    display: block;
+  }
+
+  #register-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    cursor: pointer;
+  }
+
+
+  #register {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    padding: 1.5rem;
+    z-index: 1;
+  }
+
+  .register-inner {
+    background-image: linear-gradient(90deg,rgba(250, 250, 250, 1) 0%, rgba(219, 213, 213, 1) 51%, rgba(240, 243, 250, 1) 100%);
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
+  }
+
+  #submitRegister,
+  #closeRegister {
+    background-image: linear-gradient(90deg,rgba(250, 250, 250, 1) 0%, rgba(219, 213, 213, 1) 51%, rgba(240, 243, 250, 1) 100%);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    cursor: pointer;
+    padding: 10px 25px;
+    margin: 0 5px;
+  }
+
+  #myText,
+  #myText2,
+  #myEmail,
+  #myPhone {
+    opacity: 0.8;
+    border-radius: 20px;
+    padding: 8px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+</style>
+  
+
+  <div id="register-overlay"></div>
+
+  <div id="register" class="modal">
+    <button id="closeRegister">×</button>
+    <div class="register-inner">
+      <h2>PraKtice School</h2>
+      <h3>Register</h3><br>
+      <label for="myText">Username</label><br>
+      <input type="text" id="myText" placeholder="  Enter your username"><br><br>
+      <label for="myEmail">Email</label><br>
+      <input type="email" id="myEmail" placeholder="  Enter your email"><br><br>
+      <label for="myPhone">Telephone</label><br>
+      <input type="number" id="myPhone" placeholder="  Enter your telephone"><br><br>
+      <label for="myText2">Password</label><br>
+      <input type="password" id="myText2" placeholder="  Enter your password"><br><br>
+      <button id="submitRegister">Register</button>
+    </div>
+  </div>
+</div>
+
