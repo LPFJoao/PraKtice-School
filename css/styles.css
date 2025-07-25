@@ -250,19 +250,6 @@
 	}
 }
 
-#chat-logo {
-  position: fixed;
-  right: 20px;
-  width: 90px;
-  height: 90px;
-  z-index: 1000;
-  bottom: 20px;
-}
-#chat-logo:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-}
 
 footer {
   width: auto;
@@ -274,6 +261,8 @@ footer {
   margin: 30px;
   padding-left: 50px;
   padding-right: 50px;
+  position: relative;
+  
 }
 
 #footer-right {
@@ -287,6 +276,7 @@ footer {
   padding-bottom: 35px;
   padding-left: 20px;
   padding-right: 20px;
+  width: 25%;
 }
 
 #footer-right img:hover {
@@ -325,7 +315,50 @@ footer ul{
   padding-left: 20px;
   padding-right: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content:center;
+  justify-content: space-evenly;
+  color: #fff;
+  width: 50%;
+}
+.footer-links{
+	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	gap: 10px;
+	line-height: 40px;
+	font-weight: bold;
+    font-size: 28px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.5ex;
+  cursor: pointer;
+
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  justify-content: center;
+  gap: 10px;
+  
+}
+
+.footer-border{
+	  position: absolute;
+  bottom: 5%;
+  width: 96%;
+  left: 2%;
+  right: 2%;
+  height: 2px;
+  background-color: #fff; /* Replace with your desired color */
+  border-bottom: black;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
 }
