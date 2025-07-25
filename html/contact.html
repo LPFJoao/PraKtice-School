@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Commercial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f8;
+      color: #111;
+    }
+
+    .page {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      gap: 60px;
+    }
+
+    .left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .left p {
+      font-size: 18px;
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    .logos {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      opacity: 0.7;
+    }
+
+    .logos img {
+      height: 30px;
+    }
+
+    .map {
+      margin-top: 40px;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-section {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    form label {
+      font-weight: 600;
+      margin-bottom: 4px;
+      display: block;
+      font-size: 14px;
+    }
+
+    input, select, textarea {
+      width: 90%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 12px; /* Arrondi augmenté */
+      background: #fff;
+      font-size: 15px;
+      margin-top: 6px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #5d7137;
+      box-shadow: 0 0 0 2px rgba(93, 113, 55, 0.3);
+    }
+
+    textarea {
+      grid-column: span 2;
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .checkbox {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      gap: 8px;
+      grid-column: span 2;
+    }
+
+    .checkbox input[type="checkbox"] {
+      accent-color: #5d7137;
+      width: 18px;
+      height: 18px;
+    }
+
+    .submit-btn {
+      grid-column: span 2;
+      margin-top: 20px;
+    }
+
+    button {
+      background-color: #5d7137;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 14px 24px;
+      border-radius: 12px; /* Arrondi augmenté */
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #9aa179;
+    }
+
+    @media (max-width: 768px) {
+      form {
+        grid-template-columns: 1fr;
+      }
+
+      textarea, .checkbox, .submit-btn {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <div class="left">
+    <h1>Contacter notre équipe commerciale</h1>
+    <p>Parlez-nous de votre entreprise et découvrez comment nous pouvons vous aider à aller plus loin.</p>
+    <div class="logos">
+      <!-- logos ici si besoin -->
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.8912043747973!2d2.361938315674232!3d48.827220779285566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e672073f8e4305%3A0x28a7e9383f9cbf9e!2sRue%20du%20Ch%C3%A2teau-des-Rentiers%2C%2075013%20Paris!5e0!3m2!1sfr!2sfr!4v1721818030000!5m2!1sfr!2sfr"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="form-section">
+    <form>
+      <div class="form-group">
+        <label>Nom</label>
+        <input type="text" required>
+      </div>
+      <div>
+        <label>Prénom</label>
+        <input type="text" required>
+      </div>
+      <div>
+        <label>Email professionnel</label>
+        <input type="email" required>
+      </div>
+      <div>
+        <label>Poste</label>
+        <input type="text" required>
+      </div>
+      <div>
+        <label>Entreprise</label>
+        <input type="text" required>
+      </div>
+      <div>
+        <label>Taille de l’entreprise</label>
+        <select>
+          <option>1-10</option>
+          <option>11-50</option>
+          <option>51-200</option>
+          <option>201+</option>
+        </select>
+      </div>
+      <div>
+        <label>Pays</label>
+        <select>
+          <option>France</option>
+          <option>Belgique</option>
+          <option>Suisse</option>
+        </select>
+      </div>
+      <div>
+        <label>Téléphone</label>
+        <input type="tel" required>
+      </div>
+      <div>
+        <label>Motif de contact</label>
+        <select>
+          <option>Demande de devis</option>
+          <option>Partenariat</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div></div>
+      <textarea placeholder="Comment comptez-vous utiliser notre solution ? (facultatif)"></textarea>
+      <div class="checkbox">
+        <input type="checkbox" id="opt-out">
+        <label for="opt-out">Je ne souhaite pas recevoir de communications commerciales.</label>
+      </div>
+      <div class="submit-btn">
+        <button type="submit">Envoyer la demande</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
