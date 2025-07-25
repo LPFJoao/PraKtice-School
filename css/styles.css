@@ -257,7 +257,7 @@ Styles for Main Content
 .main-container {
   display: flex;
   flex-direction: column;
-  
+  gap: 20px;
   justify-content: center;
   min-height: calc(100vh - 470px);
   padding: 20px;
@@ -271,17 +271,34 @@ Styles for Main Content
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	border: solid 1px var(--flower-green);
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	height: 50%;
 	width: 100%;
-	background-color: #fff;
-
 }
+
+.promo-video {
+	max-width: 640px;
+  	height: auto;
+  	border-radius: 12px;
+ 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  	display: block;
+  	margin: 0 auto;
+}
+
 .second-content {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+	border: solid 1px var(--flower-green);
+	border-radius: 12px;
+	padding: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 	height: 50%;
-	margin-top: 20px;
+	width: 100%;
 }
 
 .philosophy-list li::marker {
