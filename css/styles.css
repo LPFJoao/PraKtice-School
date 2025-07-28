@@ -244,7 +244,7 @@
 			background-color: var(--button-link-text);
 			border: var(--button-link-primary-border);
 			&:hover {
-				background-color: var(--button-link-text); /* Changer la couleur ces mechant auront choisit la couleur */
+				background-color: var(--button-link-text);
 			}
 		}
 	}
@@ -289,7 +289,7 @@ Styles for Main Content
 }
 
 .promo-video {
-	max-width: 640px;
+	max-width: 800px;
   	height: auto;
   	border-radius: 12px;
  	box-shadow: 
@@ -319,15 +319,84 @@ Styles for Main Content
 	justify-content: center;
 	align-items: center;
 	width: 50%;
-}
-.first-content-right {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 50%;
+	border-left: 6px solid #5d7137;x;
+  	border-radius: 16px;
+  	box-shadow: 0 8px 24px rgba(93, 113, 55, 0.2);
+  	flex: 1;
+  	margin: 20px;
+  	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.first-content-left img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+	
+}
+.first-content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  background: #fff;
+  padding: 24px;
+  margin: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(93, 113, 55, 0.2);
+  border-left: 6px solid #5d7137;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+}
+
+.first-content-right:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(93, 113, 55, 0.25);
+}
+
+.first-content-right h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #2e3a1d;
+  font-weight: 700;
+  text-align: left;
+}
+
+.first-content-right p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.first-content-right .philosophy-list {
+	
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.first-content-right .philosophy-list li {
+
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+  font-size: 1rem;
+  color: #2e2e2e;
+  line-height: 1.5;
+}
+
+.first-content-right .philosophy-list li::before {
+		content: "🌿 ";
+  position: absolute;
+  left: 0;
+  color: #27a844;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 
 .second-content {
 	display: flex;
@@ -342,34 +411,96 @@ Styles for Main Content
 	width: 100%;
 }
 .second-content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  background: #fff;
+  padding: 24px;
+  margin: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(93, 113, 55, 0.2);
+  border-left: 6px solid #5d7137;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1;
+}
+
+.second-content-left:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(93, 113, 55, 0.25);
+}
+
+.second-content-left h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #2e3a1d;
+  font-weight: 700;
+  text-align: left;
+}
+
+.second-content-left p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.second-content-left .philosophy-list {
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.second-content-left .philosophy-list li {
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+  font-size: 1rem;
+  color: #2e2e2e;
+  line-height: 1.5;
+}
+
+.second-content-left .philosophy-list li::before {
+  content: "🌿 ";
+  position: absolute;
+  left: 0;
+  color: #27a844;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.second-content-left {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 50%;
 }
-.philosophy-list {
-	padding: 20px;
-	margin: 10px;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-}
-.philosophy-list li::marker {
-	content: "✅";
-	color: var(--flower-green);
-	font-size: 1.5rem;
-}
+
 .second-content-right {
-	display: flex;
+    display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 50%;
+	border-left: 6px solid #5d7137;
+  	border-radius: 16px;
+  	box-shadow: 0 8px 24px rgba(93, 113, 55, 0.2);
+  	flex: 1;
+  	margin: 20px;
+  	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.second-content-right img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
 
-
+}
 /* 
 Styles for footer Content
 */
@@ -478,7 +609,7 @@ footer ul{
   left: 2%;
   right: 2%;
   height: 2px;
-  background-color: #fff; /* Replace with your desired color */
+  background-color: #fff;
   border-bottom: black;
   text-align: center;
   color: #fff;
