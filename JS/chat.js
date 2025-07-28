@@ -1,6 +1,8 @@
+//chargement de la page 
+
 document.addEventListener('DOMContentLoaded', () => {
 
-  // === Chat flottant ===
+// recuperation des elements html
   const chatToggle = document.getElementById('chat-toggle');
   const chatPopup = document.getElementById('chat-popup');
   const chatClose = document.getElementById('chat-close');
@@ -11,13 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-conversations');
 
   if (!chatToggle || !chatPopup) return;
-
+// la liste des conversation
   let convos = JSON.parse(localStorage.getItem('convos') || '[]');
   let activeId = null;
 
   function save() {
     localStorage.setItem('convos', JSON.stringify(convos));
   }
+
+
+  // Affichage de la liste des conversation
 
   function renderConvos(list = convos) {
     convoListEl.innerHTML = '';
@@ -35,6 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+
+// Affichage des message
   function renderMessages() {
     msgsContainer.innerHTML = '';
     if (!activeId) return;
@@ -66,13 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderConvos();
   renderMessages();
-
+// Ouverture et fermeture du popup
   chatToggle.addEventListener('click', () => {
     chatPopup.classList.toggle('active');
   });
   chatClose.addEventListener('click', () => {
     chatPopup.classList.remove('active');
   });
+
+
+  
+  //Envoi dU message
 
   form.addEventListener('submit', e => {
     e.preventDefault();
