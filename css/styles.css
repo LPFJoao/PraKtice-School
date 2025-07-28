@@ -266,6 +266,40 @@ Styles for Main Content
   background-color: rgb(255, 255, 255);
 }
 
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background-color: var(--c-accent);
+  height: 800px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 145px;
+  border-top-left-radius: 145px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;  
+  border-radius: 12px;
+}
+
+.promo-video {
+	max-width: 640px;
+  	height: auto;
+  	border-radius: 12px;
+ 	box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.3), 
+    0 16px 40px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) translateZ(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  	display: block;
+  	margin: 0 auto;
+}
 .first-content {
 	display: flex;
 	flex-direction: row;
@@ -275,18 +309,25 @@ Styles for Main Content
 	border-radius: 12px;
 	padding: 20px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	height: 50%;
+	height: 45%;
 	width: 100%;
 }
 
-.promo-video {
-	max-width: 640px;
-  	height: auto;
-  	border-radius: 12px;
- 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  	display: block;
-  	margin: 0 auto;
+.first-content-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
 }
+.first-content-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
 
 .second-content {
 	display: flex;
@@ -297,18 +338,36 @@ Styles for Main Content
 	border-radius: 12px;
 	padding: 20px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	height: 50%;
+	height: 45%;
 	width: 100%;
 }
-
+.second-content-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+.philosophy-list {
+	padding: 20px;
+	margin: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
 .philosophy-list li::marker {
 	content: "✅";
 	color: var(--flower-green);
 	font-size: 1.5rem;
 }
-.philosophy-list {
-	
+.second-content-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
 }
+
 
 
 /* 
