@@ -66,7 +66,7 @@ function setupPopupEvents() {
 
   submitLogin.addEventListener("click", e => {
   e.preventDefault();               
-  window.location.href = "../html/homedashboard.html";
+  window.location.href = "../PraKtice-School/html/homedashboard.html";
 });
   
 
