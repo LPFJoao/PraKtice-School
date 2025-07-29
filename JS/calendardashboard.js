@@ -1,4 +1,21 @@
 
+//⢀⡴⠑⡄⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+//⠸⡇⠀⠿⡀⠀⠀⠀⣀⡴⢿⣿⣿⣿⣿⣿⣿⣿⣷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠑⢄⣠⠾⠁⣀⣄⡈⠙⣿⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⢀⡀⠁⠀⠀⠈⠙⠛⠂⠈⣿⣿⣿⣿⣿⠿⡿⢿⣆⠀⠀⠀⠀⠀⠀⠀ 
+// ⠀⠀⢀⡾⣁⣀⠀⠴⠂⠙⣗⡀⠀⢻⣿⣿⠭⢤⣴⣦⣤⣹⠀⠀⠀⢀⢴⣶⣆ 
+//⠀⠀⢀⣾⣿⣿⣿⣷⣮⣽⣾⣿⣥⣴⣿⣿⡿⢂⠔⢚⡿⢿⣿⣦⣴⣾⠁⠸⣼⡿ 
+//⠀⢀⡞⠁⠙⠻⠿⠟⠉⠀⠛⢹⣿⣿⣿⣿⣿⣌⢤⣼⣿⣾⣿⡟⠉⠀⠀⠀⠀⠀ 
+//⠀⣾⣷⣶⠇⠀⠀⣤⣄⣀⡀⠈⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+//⠀⠉⠈⠉⠀⠀⢦⡈⢻⣿⣿⣿⣶⣶⣶⣶⣤⣽⡹⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠀⠀⠀⠉⠲⣽⡻⢿⣿⣿⣿⣿⣿⣿⣷⣜⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣷⣶⣮⣭⣽⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀ 
+//⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠻⠿⠿⠿⠿⠛⠉
+
+
 // ===== GESTION DU CALENDRIER =====
 class CalendarManager {
     constructor() {
@@ -9,7 +26,7 @@ class CalendarManager {
                 description: "Algèbre linéaire - Salle A101",
                 startTime: "09:00",
                 endTime: "11:00",
-                date: "2025-01-23",
+                date: "2025-07-29",
                 type: "course",
                 color: "#4a90e2"
             },
@@ -19,7 +36,7 @@ class CalendarManager {
                 description: "Développement Web - Salle Info 2",
                 startTime: "14:00",
                 endTime: "16:30",
-                date: "2025-01-23",
+                date: "2025-07-29",
                 type: "lab",
                 color: "#27ae60"
             },
@@ -29,7 +46,7 @@ class CalendarManager {
                 description: "Cafétéria étudiante",
                 startTime: "12:00",
                 endTime: "13:00",
-                date: "2025-01-23",
+                date: "2025-07-29",
                 type: "break",
                 color: "#f39c12"
             },
@@ -39,7 +56,7 @@ class CalendarManager {
                 description: "Préparation présentation finale - Salle B105",
                 startTime: "16:00",
                 endTime: "17:00",
-                date: "2025-01-24",
+                date: "2025-07-30",
                 type: "meeting",
                 color: "#e67e22"
             },
@@ -59,7 +76,7 @@ class CalendarManager {
                 description: "Intelligence Artificielle - Amphi C",
                 startTime: "08:30",
                 endTime: "09:30",
-                date: "2025-01-23",
+                date: "2025-07-29",
                 type: "seminar",
                 color: "#e74c3c"
             }
