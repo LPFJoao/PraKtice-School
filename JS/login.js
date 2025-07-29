@@ -66,7 +66,7 @@ function setupPopupEvents() {
 
   submitLogin.addEventListener("click", e => {
   e.preventDefault();               
-  window.location.href = "../html/profil.html";
+  window.location.href = "../html/homedashboard.html";
 });
   
 
