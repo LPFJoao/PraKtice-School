@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Profil - Prout Prout</title>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+         />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+         />
+      <link rel="stylesheet" href="profiletestpage.css">
+      <link rel="stylesheet" href="../index.css"
+   </head>
+   <body>
+      <div class="app">
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+         <div class="sidebar-header">
+            <a href="#" class="logo">
+               <div class="logo-icon">
+                  <i class="ph ph-graduation-cap"></i>
+               </div>
+               <div class="logo-text">
+                  <h1>Student PraKtice</h1>
+                  <span>Espace étudiant</span>
+               </div>
+            </a>
+            <button id="sidebar-toggle" class="icon-button sidebar-close-btn" >
+            <i class="ph ph-x"></i>
+            </button>
+         </div>
+         <nav class="nav" id="main-navbar">
+            <a href="../pagetest/HomeDashboard/pricetestpage.html" class="nav-item">
+            <i class="ph ph-house"></i>
+            Tableau de bord
+            </a>
+            <a href="../pagetest/CalendarPage/calendarpage.html" class="nav-item">
+            <i class="ph ph-calendar"></i>
+            Calendrier
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-books"></i>
+            Mes cours
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-notebook"></i>
+            Devoirs
+            <span class="nav-badge">3</span>
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-chart-line"></i>
+            Notes
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-users-three"></i>
+            Groupes
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-book-open"></i>
+            Bibliothèque
+            </a>
+            <a href="../../profilepagetest/profiletestpage.html" class="nav-item active">
+            <i class="ph ph-user"></i>
+            Profil
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-chats"></i>
+            Messages
+            <span class="nav-badge">5</span>
+            </a>
+            <span class="nav-glider"></span>
+         </nav>
+      </aside>
+      <div class="drawer-overlay" id="sidebar-overlay"></div>
+      <div class="main-container">
+         <header class="header">
+            <div class="header-content">
+               <div class="header-left">
+                  <button class="mobile-menu-toggle">
+                  <i class="ph ph-list"></i>
+                  </button>
+                  <div class="search-bar">
+                     <i class="ph ph-magnifying-glass"></i>
+                     <input type="text" placeholder="Rechercher un cours, un devoir...">
+                  </div>
+               </div>
+               <div class="header-right">
+                  <button class="icon-button" id="notification-toggle">
+                  <i class="ph ph-bell"></i>
+                  <span class="notification-badge"></span>
+                  </button>
+                  <button class="icon-button" onclick="toggleTheme()">
+                  <i class="ph ph-moon" id="theme-icon"></i>
+                  </button>
+                  <div class="user-menu">
+                     <div class="user-info">
+                        <div class="user-name">Prout Prout</div>
+                        <div class="user-role">Licence 3 - Informatique</div>
+                     </div>
+                     <div class="user-avatar">
+                        <img src="https://preview.redd.it/mv03zzwm3x6c1.jpeg?width=640&crop=smart&auto=webp&s=3db118f68085eeef9b9af69e0f58155029299c28" alt="Avatar">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- Main Content -->
+         <main class="main-content">
+            <!-- Profile Header -->
+            <div class="profile-header">
+               <div class="profile-header-content">
+                  <div class="profile-avatar-container">
+                     <div class="profile-avatar">
+                        <img src="https://preview.redd.it/mv03zzwm3x6c1.jpeg?width=640&crop=smart&auto=webp&s=3db118f68085eeef9b9af69e0f58155029299c28" alt="Prout Prout">
+                     </div>
+                     <div class="avatar-badge">
+                        <i class="ph ph-check"></i>
+                     </div>
+                  </div>
+                  <div class="profile-info">
+                     <h1 class="profile-name">Prout Prout</h1>
+                     <p class="profile-role">Licence 3 - Informatique</p>
+                     <div class="profile-stats">
+                        <div class="profile-stat">
+                           <div class="profile-stat-value">15.8</div>
+                           <div class="profile-stat-label">Moyenne</div>
+                        </div>
+                        <div class="profile-stat">
+                           <div class="profile-stat-value">6</div>
+                           <div class="profile-stat-label">Cours</div>
+                        </div>
+                        <div class="profile-stat">
+                           <div class="profile-stat-value">92%</div>
+                           <div class="profile-stat-label">Présence</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="profile-actions">
+                     <button class="profile-btn">
+                     <i class="ph ph-pencil"></i> Modifier
+                     </button>
+                     <button class="profile-btn primary">
+                     <i class="ph ph-download"></i> CV
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <!-- Profile Content -->
+            <div class="profile-content">
+               <!-- Left Sidebar -->
+               <div class="info-card">
+                  <h3><i class="ph ph-user"></i> Informations personnelles</h3>
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="ph ph-identification-card"></i>
+                     </div>
+                     <div class="info-content">
+                        <div class="info-label">Numéro étudiant</div>
+                        <div class="info-value">2021054789</div>
+                     </div>
+                  </div>
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="ph ph-envelope"></i>
+                     </div>
+                     <div class="info-content">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">prout.prout@univ.fr</div>
+                     </div>
+                  </div>
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="ph ph-phone"></i>
+                     </div>
+                     <div class="info-content">
+                        <div class="info-label">Téléphone</div>
+                        <div class="info-value">17</div>
+                     </div>
+                  </div>
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="ph ph-calendar"></i>
+                     </div>
+                     <div class="info-content">
+                        <div class="info-label">Date de naissance</div>
+                        <div class="info-value">15 Mars 2002</div>
+                     </div>
+                  </div>
+                  <div class="info-item">
+                     <div class="info-icon">
+                        <i class="ph ph-map-pin"></i>
+                     </div>
+                     <div class="info-content">
+                        <div class="info-label">Adresse</div>
+                        <div class="info-value">12 Rue de la République<br>06400 Cannes</div>
+                     </div>
+                  </div>
+               </div>
+               <!-- Main Content -->
+               <div class="main-profile-content">
+                  <!-- Tabs -->
+                  <div class="profile-tabs">
+                     <button class="profile-tab active" onclick="showTab('courses')">
+                     <i class="ph ph-books"></i> Mes cours
+                     </button>
+                     <button class="profile-tab" onclick="showTab('achievements')">
+                     <i class="ph ph-trophy"></i> Réussites
+                     </button>
+                     <button class="profile-tab" onclick="showTab('settings')">
+                     <i class="ph ph-gear"></i> Paramètres
+                     </button>
+                  </div>
+                  <!-- Tab Content -->
+                  <div class="tab-content" id="tab-content">
+                     <!-- Courses Tab -->
+                     <div id="courses-tab">
+                        <div class="courses-grid">
+                           <div class="course-card">
+                              <div class="course-icon">
+                                 <i class="ph ph-function"></i>
+                              </div>
+                              <h4 class="course-title">Mathématiques</h4>
+                              <p class="course-prof">Prof. Martin</p>
+                              <div class="course-progress">
+                                 <div class="course-progress-bar" style="width: 75%"></div>
+                              </div>
+                              <p class="course-progress-text">75% complété</p>
+                           </div>
+                           <div class="course-card">
+                              <div class="course-icon">
+                                 <i class="ph ph-atom"></i>
+                              </div>
+                              <h4 class="course-title">Physique</h4>
+                              <p class="course-prof">Prof. Durand</p>
+                              <div class="course-progress">
+                                 <div class="course-progress-bar" style="width: 60%"></div>
+                              </div>
+                              <p class="course-progress-text">60% complété</p>
+                           </div>
+                           <div class="course-card">
+                              <div class="course-icon">
+                                 <i class="ph ph-code"></i>
+                              </div>
+                              <h4 class="course-title">Programmation Web</h4>
+                              <p class="course-prof">Prof. Leblanc</p>
+                              <div class="course-progress">
+                                 <div class="course-progress-bar" style="width: 85%"></div>
+                              </div>
+                              <p class="course-progress-text">85% complété</p>
+                           </div>
+                           <div class="course-card">
+                              <div class="course-icon">
+                                 <i class="ph ph-database"></i>
+                              </div>
+                              <h4 class="course-title">Base de données</h4>
+                              <p class="course-prof">Prof. Garcia</p>
+                              <div class="course-progress">
+                                 <div class="course-progress-bar" style="width: 70%"></div>
+                              </div>
+                              <p class="course-progress-text">70% complété</p>
+                           </div>
+                           <div class="course-card">
+                              <div class="course-icon">
+                                 <i class="ph ph-cpu"></i>
+                              </div>
+                              <h4 class="course-title">Architecture</h4>
+                              <p class="course-prof">Prof. Bernard</p>
+                              <div class="course-progress">
+                                 <div class="course-progress-bar" style="width: 55%"></div>
+                              </div>
+                              <p class="course-progress-text">55% complété</p>
+                           </div>
+                           <div class="course-card">
+                              <div class="course-icon">
+                                 <i class="ph ph-globe"></i>
+                              </div>
+                              <h4 class="course-title">Anglais</h4>
+                              <p class="course-prof">Prof. Smith</p>
+                              <div class="course-progress">
+                                 <div class="course-progress-bar" style="width: 90%"></div>
+                              </div>
+                              <p class="course-progress-text">90% complété</p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Achievements Tab -->
+                     <div id="achievements-tab" style="display: none;">
+                        <div class="achievements-grid">
+                           <div class="achievement-card">
+                              <div class="achievement-icon">
+                                 <i class="ph ph-star"></i>
+                              </div>
+                              <h4 class="achievement-title">Première place</h4>
+                              <p class="achievement-desc">Hackathon 2024</p>
+                           </div>
+                           <div class="achievement-card">
+                              <div class="achievement-icon">
+                                 <i class="ph ph-medal"></i>
+                              </div>
+                              <h4 class="achievement-title">Mention TB</h4>
+                              <p class="achievement-desc">Semestre 5</p>
+                           </div>
+                           <div class="achievement-card">
+                              <div class="achievement-icon">
+                                 <i class="ph ph-certificate"></i>
+                              </div>
+                              <h4 class="achievement-title">Certification</h4>
+                              <p class="achievement-desc">JavaScript Expert</p>
+                           </div>
+                           <div class="achievement-card">
+                              <div class="achievement-icon">
+                                 <i class="ph ph-users"></i>
+                              </div>
+                              <h4 class="achievement-title">Délégué</h4>
+                              <p class="achievement-desc">Élu de la promo</p>
+                           </div>
+                           <div class="achievement-card">
+                              <div class="achievement-icon">
+                                 <i class="ph ph-lightbulb"></i>
+                              </div>
+                              <h4 class="achievement-title">Innovateur</h4>
+                              <p class="achievement-desc">Projet IA primé</p>
+                           </div>
+                           <div class="achievement-card">
+                              <div class="achievement-icon">
+                                 <i class="ph ph-rocket"></i>
+                              </div>
+                              <h4 class="achievement-title">Early Bird</h4>
+                              <p class="achievement-desc">100% présence</p>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- Settings Tab -->
+                     <div id="settings-tab" style="display: none;">
+                        <div class="settings-section">
+                           <h3 class="settings-title">Informations du compte</h3>
+                           <div class="form-group">
+                              <label class="form-label">Nom complet</label>
+                              <input type="text" class="form-input" value="Prout Prout">
+                           </div>
+                           <div class="form-group">
+                              <label class="form-label">Email universitaire</label>
+                              <input type="email" class="form-input" value="prout.prout@univ.fr">
+                           </div>
+                           <div class="form-group">
+                              <label class="form-label">Bio</label>
+                              <textarea class="form-input form-textarea" placeholder="Parlez-nous de vous...">Étudiant passionné en informatique, spécialisé en développement web et intelligence artificielle.</textarea>
+                           </div>
+                        </div>
+                        <div class="settings-section">
+                           <h3 class="settings-title">Préférences</h3>
+                           <div class="form-group">
+                              <div class="form-switch">
+                                 <label class="switch">
+                                 <input type="checkbox" checked>
+                                 <span class="switch-slider"></span>
+                                 </label>
+                                 <span>Recevoir les notifications par email</span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <div class="form-switch">
+                                 <label class="switch">
+                                 <input type="checkbox" checked>
+                                 <span class="switch-slider"></span>
+                                 </label>
+                                 <span>Rappels de devoirs</span>
+                              </div>
+                           </div>
+                           <div class="form-group">
+                              <div class="form-switch">
+                                 <label class="switch">
+                                 <input type="checkbox">
+                                 <span class="switch-slider"></span>
+                                 </label>
+                                 <span>Mode sombre</span>
+                              </div>
+                           </div>
+                        </div>
+                        <button class="save-btn">
+                        <i class="ph ph-check"></i> Enregistrer les modifications
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+
+
+      <!-- Bouton de chat flottant -->
+      <div id="chat-toggle" title="Ouvrir le chat">
+         <i class="ph ph-chat"></i>
+      </div>
+      <!-- Pop-up Chat -->
+      <div id="chat-popup">
+         <div class="chat-header">
+            <h2 class="chat-title">Messagerie</h2>
+            <button id="chat-close">✖</button>
+         </div>
+         <div class="chat-body">
+            <div class="chat-list">
+               <!-- Barre de recherche INSÉRÉE ICI -->
+               <input type="text" id="search-conversations" placeholder="Rechercher une conversation..." style="width: 90%; margin: 10px auto 12px auto; padding: 6px 10px; display: block; border-radius: 6px; border: 1px solid #ccc;" />
+               <ul id="conversation-list"></ul>
+            </div>
+            <div class="chat-window">
+               <div id="messages-container"></div>
+               <form id="chat-form">
+                  <input type="text" id="chat-input" placeholder="Écris un message..." autocomplete="off" />
+                  <button type="submit">Envoyer</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      
+         <!-- Notifications Drawer -->
+         <div class="drawer-overlay" id="drawer-overlay"></div>
+         <div class="notifications-drawer" id="notifications-drawer" >
+            <div class="notifications-header">
+               <h2 class="notifications-title">
+                  <i class="ph ph-bell"></i>
+                  Notifications
+               </h2>
+               <button class="notifications-close" id="notifications-close">
+               <i class="ph ph-x"></i>
+               </button>
+            </div>
+            <div class="notifications-filters">
+               <button class="filter-chip active" onclick="filterNotifications('all')">Tout</button>
+               <button class="filter-chip" onclick="filterNotifications('unread')">Non lus</button>
+               <button class="filter-chip" onclick="filterNotifications('course')">Cours</button>
+               <button class="filter-chip" onclick="filterNotifications('assignment')">Devoirs</button>
+            </div>
+            <div class="notifications-list" id="notifications-list">
+               <!-- Notifications seront ici (voir javascript index.js) -->
+            </div>
+         </div>
+      </div>
+      <script src="profiletestpage.js"></script>
+      <script src="../index.js"></script>
+   </body>
+</html>

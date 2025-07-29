@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>StudentHub Calendrier</title>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+         />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+         />
+      <link rel="stylesheet" href="calendardashboard.css">
+      <link rel="stylesheet" href="../../index.css">
+      <script src="../../index.js"></script>
+   </head>
+   <body>
+      <div class="app">
+      <!--  Left Sidebar -->
+      <aside class="sidebar" id="sidebar">
+         <div class="sidebar-header">
+            <a href="#" class="logo">
+               <div class="logo-icon">
+                  <i class="ph ph-graduation-cap"></i>
+               </div>
+               <div class="logo-text">
+                  <h1>Student PraKtice</h1>
+                  <span>Espace étudiant</span>
+               </div>
+            </a>
+            <button id="sidebar-toggle" class="icon-button sidebar-close-btn" >
+            <i class="ph ph-x"></i>
+            </button>
+         </div>
+         <nav class="nav" id="main-navbar">
+            <a href="../HomeDashboard/pricetestpage.html" class="nav-item">
+            <i class="ph ph-house"></i>
+            Tableau de bord
+            </a>
+            <a href="#" class="nav-item active">
+            <i class="ph ph-calendar"></i>
+            Calendrier
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-books"></i>
+            Mes cours
+            </a>
+            <a href="../AssignmentsPage/assignmentsdashboard.html" class="nav-item">
+            <i class="ph ph-notebook"></i>
+            Devoirs
+            <span class="nav-badge">3</span>
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-chart-line"></i>
+            Notes
+            </a>
+            <a href="../GroupsPage/groupsdashboard.html" class="nav-item">
+            <i class="ph ph-users-three"></i>
+            Groupes
+            </a>
+            <a href="../LibraryPage/librarydashboard.html" class="nav-item">
+            <i class="ph ph-book-open"></i>
+            Bibliothèque
+            </a>
+            <a href="../../profilepagetest/profiletestpage.html" class="nav-item">
+            <i class="ph ph-user"></i>
+            Profil
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-chats"></i>
+            Messages
+            <span class="nav-badge">5</span>
+            </a>
+            <span class="nav-glider"></span>
+         </nav>
+      </aside>
+      <div class="drawer-overlay" id="sidebar-overlay"></div>
+      <!-- Main Content -->
+      <div class="main-container">
+         <header class="header">
+            <div class="header-content">
+               <div class="header-left">
+                  <button class="mobile-menu-toggle">
+                  <i class="ph ph-list"></i>
+                  </button>
+                  <div class="search-bar">
+                     <i class="ph ph-magnifying-glass"></i>
+                     <input type="text" placeholder="Rechercher un cours, un devoir...">
+                  </div>
+               </div>
+               <div class="header-right">
+                  <button class="icon-button" id="notification-toggle">
+                  <i class="ph ph-bell"></i>
+                  <span class="notification-badge"></span>
+                  </button>
+                  <button class="icon-button" onclick="toggleTheme()">
+                  <i class="ph ph-moon" id="theme-icon"></i>
+                  </button>
+                  <div class="user-menu">
+                     <div class="user-info">
+                        <div class="user-name">Prout Prout</div>
+                        <div class="user-role">Licence 3 - Informatique</div>
+                     </div>
+                     <div class="user-avatar">
+                        <img src="https://preview.redd.it/mv03zzwm3x6c1.jpeg?width=640&crop=smart&auto=webp&s=3db118f68085eeef9b9af69e0f58155029299c28" alt="Avatar">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- Main Content -->
+         <main class="main-content">
+            <div class="page-header">
+               <h1 class="page-title">Calendrier</h1>
+               <p class="page-subtitle" id="page-subtitle">Mercredie 23 juillet 2025</p>
+            </div>
+            <div class="calendar-agenda-layout">
+               <div class="agenda-main">
+                  <div class="agenda-header">
+                     <span class="agenda-date" id="agenda-date">Mercredi 23 juillet 2025</span>
+                     <div class="agenda-controls">
+                        <button class="icon-button" onclick="changeDate(-1)"><i class="ph ph-caret-left"></i></button>
+                        <button class="icon-button" onclick="changeDate(1)"><i class="ph ph-caret-right"></i></button>
+                        <button class="agenda-today" onclick="goToToday()">Aujourd'hui</button>
+                     </div>
+                  </div>
+                  <div class="agenda-view">
+                     <div class="agenda-hours">
+                        <div>8h</div>
+                        <div>9h</div>
+                        <div>10h</div>
+                        <div>11h</div>
+                        <div>12h</div>
+                        <div>13h</div>
+                        <div>14h</div>
+                        <div>15h</div>
+                        <div>16h</div>
+                        <div>17h</div>
+                     </div>
+                     <div class="agenda-events" id="agenda-events">
+                        <div class="hour-lines">
+                           <!-- 8h --> 
+                           <div class="hour-line" style="top: 0px;"></div>
+                           <!-- 9h --> 
+                           <div class="hour-line" style="top: 60px;"></div>
+                           <!-- 10h --> 
+                           <div class="hour-line" style="top: 120px;"></div>
+                           <!-- 11h --> 
+                           <div class="hour-line" style="top: 180px;"></div>
+                           <!-- 12h --> 
+                           <div class="hour-line" style="top: 240px;"></div>
+                           <!-- 13h --> 
+                           <div class="hour-line" style="top: 300px;"></div>
+                           <!-- 14h --> 
+                           <div class="hour-line" style="top: 360px;"></div>
+                           <!-- 15h --> 
+                           <div class="hour-line" style="top: 420px;"></div>
+                           <!-- 16h --> 
+                           <div class="hour-line" style="top: 480px;"></div>
+                           <!-- 17h --> 
+                           <div class="hour-line" style="top: 540px;"></div>
+                           <!-- 18h --> 
+                           <div class="hour-line" style="top: 600px;"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <aside class="agenda-sidebar">
+                  <div class="mini-calendar">
+                     <div class="mini-calendar-header">
+                        <button class="calendar-nav-btn" onclick="changeMonth(-1)"><i class="ph ph-caret-left"></i></button>
+                        <span id="calendar-month">Juillet 2025</span>
+                        <button class="calendar-nav-btn" onclick="changeMonth(1)"><i class="ph ph-caret-right"></i></button>
+                     </div>
+                     <table class="mini-calendar-table" id="mini-calendar">
+                        <thead>
+                           <tr>
+                              <th>Lu</th>
+                              <th>Ma</th>
+                              <th>Me</th>
+                              <th>Je</th>
+                              <th>Ve</th>
+                              <th>Sa</th>
+                              <th>Di</th>
+                           </tr>
+                        </thead>
+                        <tbody id="calendar-body">
+                           <!-- Calendar generer par le javascript -->
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="event-details" id="event-details">
+                     <h3><i class="ph ph-calendar-check"></i> Détail de l'événement</h3>
+                     <p style="text-align: center; color: var(--c-text-tertiary); margin-top: 2rem;">
+                        Cliquez sur un événement pour voir les détails
+                     </p>
+                  </div>
+               </aside>
+            </div>
+         </main>
+      </div>
+      <!-- Quick Actions Button -->
+      <!-- <div class="quick-actions">
+         <button class="quick-action-btn" onclick="openAddEvent()">
+             <i class="ph ph-plus"></i>
+         </button>
+         </div> -->
+     
+      <!-- Bouton de chat flottant -->
+      <div id="chat-toggle" title="Ouvrir le chat">
+         <i class="ph ph-chat"></i>
+      </div>
+      <!-- Pop-up Chat -->
+      <div id="chat-popup">
+         <div class="chat-header">
+            <h2 class="chat-title">Messagerie</h2>
+            <button id="chat-close">✖</button>
+         </div>
+         <div class="chat-body">
+            <div class="chat-list">
+               <!-- Barre de recherche INSÉRÉE ICI -->
+               <input type="text" id="search-conversations" placeholder="Rechercher une conversation..." style="width: 90%; margin: 10px auto 12px auto; padding: 6px 10px; display: block; border-radius: 6px; border: 1px solid #ccc;" />
+               <ul id="conversation-list"></ul>
+            </div>
+            <div class="chat-window">
+               <div id="messages-container"></div>
+               <form id="chat-form">
+                  <input type="text" id="chat-input" placeholder="Écris un message..." autocomplete="off" />
+                  <button type="submit">Envoyer</button>
+               </form>
+            </div>
+         </div>
+      </div>
+     
+         <!-- Notifications Drawer -->
+         <div class="drawer-overlay" id="drawer-overlay"></div>
+         <div class="notifications-drawer" id="notifications-drawer" >
+            <div class="notifications-header">
+               <h2 class="notifications-title">
+                  <i class="ph ph-bell"></i>
+                  Notifications
+               </h2>
+               <button class="notifications-close" id="notifications-close">
+               <i class="ph ph-x"></i>
+               </button>
+            </div>
+            <div class="notifications-filters">
+               <button class="filter-chip active" onclick="filterNotifications('all')">Tout</button>
+               <button class="filter-chip" onclick="filterNotifications('unread')">Non lus</button>
+               <button class="filter-chip" onclick="filterNotifications('course')">Cours</button>
+               <button class="filter-chip" onclick="filterNotifications('assignment')">Devoirs</button>
+            </div>
+            <div class="notifications-list" id="notifications-list">
+               <!-- Notifications seront ici (voir javascript index.js) -->
+            </div>
+         </div>
+      </div>
+      <script src="calendardashboard.js"></script>
+   </body>
+</html>
