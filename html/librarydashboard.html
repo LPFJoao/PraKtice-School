@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>StudentHub Bibliothèque</title>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+         />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+         />
+      <link rel="stylesheet" href="librarydashboard.css">
+      <link rel="stylesheet" href="../../index.css">
+      <script src="../../index.js"></script>
+   </head>
+   <body>
+      <div class="app">
+      <!--  Left Sidebar -->
+      <aside class="sidebar" id="sidebar">
+         <div class="sidebar-header">
+            <a href="#" class="logo">
+               <div class="logo-icon">
+                  <i class="ph ph-graduation-cap"></i>
+               </div>
+               <div class="logo-text">
+                  <h1>Student PraKtice</h1>
+                  <span>Espace étudiant</span>
+               </div>
+            </a>
+            <button id="sidebar-toggle" class="icon-button sidebar-close-btn" >
+            <i class="ph ph-x"></i>
+            </button>
+         </div>
+         <nav class="nav" id="main-navbar">
+            <a href="../HomeDashboard/pricetestpage.html" class="nav-item">
+            <i class="ph ph-house"></i>
+            Tableau de bord
+            </a>
+            <a href="../CalendarPage/calendardashboard.html" class="nav-item">
+            <i class="ph ph-calendar"></i>
+            Calendrier
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-books"></i>
+            Mes cours
+            </a>
+            <a href="../AssignmentsPage/assignmentsdashboard.html" class="nav-item">
+            <i class="ph ph-notebook"></i>
+            Devoirs
+            <span class="nav-badge">3</span>
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-chart-line"></i>
+            Notes
+            </a>
+            <a href="../GroupsPage/groupsdashboard.html" class="nav-item">
+            <i class="ph ph-users-three"></i>
+            Groupes
+            </a>
+            <a href="#" class="nav-item active">
+            <i class="ph ph-book-open"></i>
+            Bibliothèque
+            </a>
+            <a href="../../profilepagetest/profiletestpage.html" class="nav-item">
+            <i class="ph ph-user"></i>
+            Profil
+            </a>
+            <a href="#" class="nav-item">
+            <i class="ph ph-chats"></i>
+            Messages
+            <span class="nav-badge">5</span>
+            </a>
+            <span class="nav-glider"></span>
+         </nav>
+      </aside>
+      <div class="drawer-overlay" id="sidebar-overlay"></div>
+      <!-- Main Content -->
+      <div class="main-container">
+         <header class="header">
+            <div class="header-content">
+               <div class="header-left">
+                  <button class="mobile-menu-toggle">
+                  <i class="ph ph-list"></i>
+                  </button>
+                  <div class="search-bar">
+                     <i class="ph ph-magnifying-glass"></i>
+                     <input type="text" placeholder="Rechercher un livre, un cours, une ressource...">
+                  </div>
+               </div>
+               <div class="header-right">
+                  <button class="icon-button" id="notification-toggle">
+                  <i class="ph ph-bell"></i>
+                  <span class="notification-badge"></span>
+                  </button>
+                  <button class="icon-button" onclick="toggleTheme()">
+                  <i class="ph ph-moon" id="theme-icon"></i>
+                  </button>
+                  <div class="user-menu">
+                     <div class="user-info">
+                        <div class="user-name">Prout Prout</div>
+                        <div class="user-role">Licence 3 - Informatique</div>
+                     </div>
+                     <div class="user-avatar">
+                        <img src="https://media.discordapp.net/attachments/1380103620812607520/1395729486762475530/mv03zzwm3x6c1.png?ex=688170a1&is=68801f21&hm=08b7dc143e0b92dd9d77d4f75259f06c598a40a0d25225e83318a9b1dfcc0fe3&=&format=webp&quality=lossless&width=1280&height=590" alt="Avatar">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!-- Main Content -->
+         <main class="main-content">
+            <div class="page-header">
+               <h1 class="page-title">Bibliothèque</h1>
+               <p class="page-subtitle" id="page-subtitle">Découvrez des milliers de ressources pour enrichir vos connaissances</p>
+            </div>
+            <div class="library-layout">
+               <div class="library-main">
+                  <div class="library-header">
+                     <span class="library-title" id="library-title">Ressources disponibles</span>
+                     <div class="library-controls">
+                        <button class="icon-button active" onclick="filterResources('all')"><i class="ph ph-funnel"></i></button>
+                        <button class="icon-button" onclick="filterResources('books')"><i class="ph ph-book"></i></button>
+                        <button class="icon-button" onclick="filterResources('courses')"><i class="ph ph-graduation-cap"></i></button>
+                        <button class="icon-button" onclick="filterResources('videos')"><i class="ph ph-video-camera"></i></button>
+                        <button class="icon-button" onclick="filterResources('tutorials')"><i class="ph ph-code"></i></button>
+                        <button class="library-favorites" onclick="showFavorites()">
+                           <i class="ph ph-heart"></i> Favoris
+                        </button>
+                     </div>
+                  </div>
+                                     <div class="resources-grid" id="resources-grid">
+                      <!-- Les ressources seront générées par JavaScript -->
+                   </div>
+                   <div class="pagination-container" id="pagination-container">
+                      <!-- La pagination sera générée par JavaScript -->
+                   </div>
+               </div>
+               <aside class="library-sidebar">
+                  <div class="resource-details" id="resource-details">
+                     <h3><i class="ph ph-book-open"></i> Détails de la ressource</h3>
+                     <p style="text-align: center; color: var(--c-text-tertiary); margin-top: 2rem;">
+                        Cliquez sur une ressource pour voir les détails
+                     </p>
+                  </div>
+                  <div class="reading-progress">
+                     <h3><i class="ph ph-chart-line"></i> Progression de lecture</h3>
+                     <div class="progress-stats" id="progress-stats">
+                        <!-- Les statistiques de progression seront générées par JavaScript -->
+                     </div>
+                  </div>
+                  <div class="recommendations">
+                     <h3><i class="ph ph-lightbulb"></i> Recommandations</h3>
+                     <div class="recommendations-list" id="recommendations-list">
+                        <!-- Les recommandations seront générées par JavaScript -->
+                     </div>
+                  </div>
+               </aside>
+            </div>
+         </main>
+      </div>
+      <!-- Quick Actions Button 
+      <div class="quick-actions">
+         <button class="quick-action-btn" onclick="addToFavorites()">
+             <i class="ph ph-heart"></i>
+         </button>
+      </div> -->
+     
+      <!-- Bouton de chat flottant -->
+      <div id="chat-toggle" title="Ouvrir le chat">
+         <i class="ph ph-chat"></i>
+      </div>
+      <!-- Pop-up Chat -->
+      <div id="chat-popup">
+         <div class="chat-header">
+            <h2 class="chat-title">Messagerie</h2>
+            <button id="chat-close">✖</button>
+         </div>
+         <div class="chat-body">
+            <div class="chat-list">
+               <!-- Barre de recherche INSÉRÉE ICI -->
+               <input type="text" id="search-conversations" placeholder="Rechercher une conversation..." style="width: 90%; margin: 10px auto 12px auto; padding: 6px 10px; display: block; border-radius: 6px; border: 1px solid #ccc;" />
+               <ul id="conversation-list"></ul>
+            </div>
+            <div class="chat-window">
+               <div id="messages-container"></div>
+               <form id="chat-form">
+                  <input type="text" id="chat-input" placeholder="Écris un message..." autocomplete="off" />
+                  <button type="submit">Envoyer</button>
+               </form>
+            </div>
+         </div>
+      </div>
+     
+         <!-- Notifications Drawer -->
+         <div class="drawer-overlay" id="drawer-overlay"></div>
+         <div class="notifications-drawer" id="notifications-drawer" >
+            <div class="notifications-header">
+               <h2 class="notifications-title">
+                  <i class="ph ph-bell"></i>
+                  Notifications
+               </h2>
+               <button class="notifications-close" id="notifications-close">
+               <i class="ph ph-x"></i>
+               </button>
+            </div>
+            <div class="notifications-filters">
+               <button class="filter-chip active" onclick="filterNotifications('all')">Tout</button>
+               <button class="filter-chip" onclick="filterNotifications('unread')">Non lus</button>
+               <button class="filter-chip" onclick="filterNotifications('course')">Cours</button>
+               <button class="filter-chip" onclick="filterNotifications('assignment')">Devoirs</button>
+            </div>
+            <div class="notifications-list" id="notifications-list">
+               <!-- Notifications seront ici (voir javascript index.js) -->
+            </div>
+         </div>
+      </div>
+      <script src="librarydashboard.js"></script>
+   </body>
+</html> 

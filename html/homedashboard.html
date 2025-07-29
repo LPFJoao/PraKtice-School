@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>StudentHub Dashboard</title>
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+         />
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+         />
+      <link rel="stylesheet" href="homedashboard.css">
+      <link rel="stylesheet" href="../../index.css">
+   </head>
+   <body>
+      <div class="app">
+         <!-- Sidebar -->
+         <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+               <a href="#" class="logo">
+                  <div class="logo-icon">
+                     <i class="ph ph-graduation-cap"></i>
+                  </div>
+                  <div class="logo-text">
+                     <h1>Student PraKtice</h1>
+                     <span>Espace étudiant</span>
+                  </div>
+               </a>
+               <button id="sidebar-toggle" class="icon-button sidebar-close-btn" >
+               <i class="ph ph-x"></i>
+               </button>
+            </div>
+            <nav class="nav" id="main-navbar">
+               <a href="#" class="nav-item active">
+               <i class="ph ph-house"></i>
+               Tableau de bord
+               </a>
+               <a href="../CalendarPage/calendarpage.html" class="nav-item">
+               <i class="ph ph-calendar"></i>
+               Calendrier
+               </a>
+               <a href="#" class="nav-item">
+               <i class="ph ph-books"></i>
+               Mes cours
+               </a>
+               <a href="#" class="nav-item">
+               <i class="ph ph-notebook"></i>
+               Devoirs
+               <span class="nav-badge">3</span>
+               </a>
+               <a href="#" class="nav-item">
+               <i class="ph ph-chart-line"></i>
+               Notes
+               </a>
+               <a href="#" class="nav-item">
+               <i class="ph ph-users-three"></i>
+               Groupes
+               </a>
+               <a href="#" class="nav-item">
+               <i class="ph ph-book-open"></i>
+               Bibliothèque
+               </a>
+               <a href="../../profilepagetest/profiletestpage.html" class="nav-item">
+               <i class="ph ph-user"></i>
+               Profil
+               </a>
+               <a href="#" class="nav-item">
+               <i class="ph ph-chats"></i>
+               Messages
+               <span class="nav-badge">5</span>
+               </a>
+               <span class="nav-glider"></span>
+            </nav>
+         </aside>
+         <div class="drawer-overlay" id="sidebar-overlay"></div>
+         <div class="main-container">
+            <header class="header">
+               <div class="header-content">
+                  <div class="header-left">
+                     <button class="mobile-menu-toggle">
+                     <i class="ph ph-list"></i>
+                     </button>
+                     <div class="search-bar">
+                        <i class="ph ph-magnifying-glass"></i>
+                        <input type="text" placeholder="Rechercher un cours, un devoir...">
+                     </div>
+                  </div>
+                  <div class="header-right">
+                     <button class="icon-button" id="notification-toggle">
+                     <i class="ph ph-bell"></i>
+                     <span class="notification-badge"></span>
+                     </button>
+                     <button class="icon-button" onclick="toggleTheme()">
+                     <i class="ph ph-moon" id="theme-icon"></i>
+                     </button>
+                     <div class="user-menu">
+                        <div class="user-info">
+                           <div class="user-name">Prout Prout</div>
+                           <div class="user-role">Licence 3 - Informatique</div>
+                        </div>
+                        <div class="user-avatar">
+                           <img src="https://media.discordapp.net/attachments/1395757487684321280/1396785864893267978/image.png?ex=6882a575&is=688153f5&hm=bb0303a9517d5eddaa677649d16f3391c4147344d41d6ca25e27be200a88b9bd&=&format=webp&quality=lossless&width=1280&height=590" alt="Avatar">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </header>
+            <!-- Main Content -->
+            <main class="main-content">
+               <div class="page-header">
+                  <h1 class="page-title">Bonjour Prout ! 👋</h1>
+                  <p class="page-subtitle">Voici un aperçu de votre journée du lundi 21 juillet 2025</p>
+               </div>
+               <div class="stats-grid">
+                  <div class="stat-card">
+                     <div class="stat-icon">
+                        <i class="ph ph-books"></i>
+                     </div>
+                     <div class="stat-value">8</div>
+                     <div class="stat-label">Cours actifs</div>
+                     <div class="stat-trend">+2 ce semestre</div>
+                  </div>
+                  <div class="stat-card">
+                     <div class="stat-icon">
+                        <i class="ph ph-warning-circle"></i>
+                     </div>
+                     <div class="stat-value">3</div>
+                     <div class="stat-label">Devoirs en retard</div>
+                     <div class="stat-trend down">À rendre</div>
+                  </div>
+                  <div class="stat-card">
+                     <div class="stat-icon">
+                        <i class="ph ph-check-circle"></i>
+                     </div>
+                     <div class="stat-value">15</div>
+                     <div class="stat-label">Devoirs terminés</div>
+                     <div class="stat-trend">+5 cette semaine</div>
+                  </div>
+                  <div class="stat-card">
+                     <div class="stat-icon">
+                        <i class="ph ph-trend-up"></i>
+                     </div>
+                     <div class="stat-value">16.5</div>
+                     <div class="stat-label">Moyenne générale</div>
+                     <div class="stat-trend">+0.8 points</div>
+                  </div>
+               </div>
+               <!-- Today's Courses -->
+               <section class="section">
+                  <div class="section-header">
+                     <h2 class="section-title">Cours d'aujourd'hui</h2>
+                     <a href="#" class="section-action">Voir l'emploi du temps complet →</a>
+                  </div>
+                  <div class="courses-grid">
+                     <div class="course-card">
+                        <div class="course-header">
+                           <div class="course-info">
+                              <h3>Mathématiques</h3>
+                              <p>Prof. Martin • Salle 204</p>
+                           </div>
+                           <div class="course-time">10:00 - 11:30</div>
+                        </div>
+                        <div class="course-topic">Algèbre linéaire - Chapitre 5</div>
+                        <div class="course-progress">
+                           <div class="progress-info">
+                              <span class="progress-label">Progression du semestre</span>
+                              <span class="progress-value">75%</span>
+                           </div>
+                           <div class="progress-bar">
+                              <div class="progress-fill" style="width: 75%"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="course-card">
+                        <div class="course-header">
+                           <div class="course-info">
+                              <h3>Physique</h3>
+                              <p>Prof. Durand • Salle 105</p>
+                           </div>
+                           <div class="course-time">14:00 - 15:30</div>
+                        </div>
+                        <div class="course-topic">Mécanique quantique - Introduction</div>
+                        <div class="course-progress">
+                           <div class="progress-info">
+                              <span class="progress-label">Progression du semestre</span>
+                              <span class="progress-value">60%</span>
+                           </div>
+                           <div class="progress-bar">
+                              <div class="progress-fill" style="width: 60%"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="course-card">
+                        <div class="course-header">
+                           <div class="course-info">
+                              <h3>Informatique</h3>
+                              <p>Prof. Moreau • Lab Info</p>
+                           </div>
+                           <div class="course-time">16:00 - 17:30</div>
+                        </div>
+                        <div class="course-topic">Structures de données - Arbres</div>
+                        <div class="course-progress">
+                           <div class="progress-info">
+                              <span class="progress-label">Progression du semestre</span>
+                              <span class="progress-value">85%</span>
+                           </div>
+                           <div class="progress-bar">
+                              <div class="progress-fill" style="width: 85%"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="course-card">
+                        <div class="course-header">
+                           <div class="course-info">
+                              <h3>Anglais</h3>
+                              <p>Prof. Smith • Salle 301</p>
+                           </div>
+                           <div class="course-time">09:00 - 10:30</div>
+                        </div>
+                        <div class="course-topic">Business English - Presentations</div>
+                        <div class="course-progress">
+                           <div class="progress-info">
+                              <span class="progress-label">Progression du semestre</span>
+                              <span class="progress-value">45%</span>
+                           </div>
+                           <div class="progress-bar">
+                              <div class="progress-fill" style="width: 45%"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- Assignments -->
+               <section class="section">
+                  <div class="section-header">
+                     <h2 class="section-title">Devoirs à rendre</h2>
+                     <a href="#" class="section-action">Voir tous les devoirs →</a>
+                  </div>
+                  <div class="assignments-list">
+                     <div class="assignment-item urgent">
+                        <div class="assignment-icon">
+                           <i class="ph ph-warning-circle"></i>
+                        </div>
+                        <div class="assignment-content">
+                           <div>
+                              <div class="assignment-name">Projet de Physique</div>
+                              <div class="assignment-desc">Rapport sur la mécanique quantique</div>
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>Prof. Durand</strong><br>
+                              Physique
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>22 juillet 2025</strong><br>
+                              Date limite
+                           </div>
+                           <div class="assignment-deadline">
+                              ⚠️ Dans 2 jours
+                           </div>
+                        </div>
+                     </div>
+                     <div class="assignment-item">
+                        <div class="assignment-icon">
+                           <i class="ph ph-calculator"></i>
+                        </div>
+                        <div class="assignment-content">
+                           <div>
+                              <div class="assignment-name">Exercices Mathématiques</div>
+                              <div class="assignment-desc">Chapitre 5 - Algèbre linéaire</div>
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>Prof. Martin</strong><br>
+                              Mathématiques
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>23 juillet 2025</strong><br>
+                              Date limite
+                           </div>
+                           <div class="assignment-deadline">
+                              ⏰ Demain
+                           </div>
+                        </div>
+                     </div>
+                     <div class="assignment-item completed">
+                        <div class="assignment-icon">
+                           <i class="ph ph-check-circle"></i>
+                        </div>
+                        <div class="assignment-content">
+                           <div>
+                              <div class="assignment-name">Présentation Anglais</div>
+                              <div class="assignment-desc">Business presentation</div>
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>Prof. Smith</strong><br>
+                              Anglais
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>20 juillet 2025</strong><br>
+                              Rendu
+                           </div>
+                           <div class="assignment-deadline">
+                              ✅ Terminé
+                           </div>
+                        </div>
+                     </div>
+                     <div class="assignment-item">
+                        <div class="assignment-icon">
+                           <i class="ph ph-code"></i>
+                        </div>
+                        <div class="assignment-content">
+                           <div>
+                              <div class="assignment-name">TP Informatique</div>
+                              <div class="assignment-desc">Implémentation d'un arbre binaire</div>
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>Prof. Moreau</strong><br>
+                              Informatique
+                           </div>
+                           <div class="assignment-meta">
+                              <strong>28 juillet 2025</strong><br>
+                              Date limite
+                           </div>
+                           <div class="assignment-deadline">
+                              📅 Dans 1 semaine
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </main>
+         </div>
+      </div>
+
+      <!-- Bouton de chat flottant -->
+      <div id="chat-toggle" title="Ouvrir le chat">
+         <i class="ph ph-chat"></i>
+      </div>
+      <!-- Pop-up Chat -->
+      <div id="chat-popup">
+         <div class="chat-header">
+            <h2 class="chat-title">Messagerie</h2>
+            <button id="chat-close">✖</button>
+         </div>
+         <div class="chat-body">
+            <div class="chat-list">
+               <!-- Barre de recherche INSÉRÉE ICI -->
+               <input type="text" id="search-conversations" placeholder="Rechercher une conversation..." style="width: 90%; margin: 10px auto 12px auto; padding: 6px 10px; display: block; border-radius: 6px; border: 1px solid #ccc;" />
+               <ul id="conversation-list"></ul>
+            </div>
+            <div class="chat-window">
+               <div id="messages-container"></div>
+               <form id="chat-form">
+                  <input type="text" id="chat-input" placeholder="Écris un message..." autocomplete="off" />
+                  <button type="submit">Envoyer</button>
+               </form>
+            </div>
+         </div>
+      </div>
+      
+      <div class="drawer-overlay" id="drawer-overlay"></div>
+      <div class="notifications-drawer" id="notifications-drawer" >
+         <div class="notifications-header">
+            <h2 class="notifications-title">
+               <i class="ph ph-bell"></i>
+               Notifications
+            </h2>
+            <button class="notifications-close" id="notifications-close">
+            <i class="ph ph-x"></i>
+            </button>
+         </div>
+         <div class="notifications-filters">
+            <button class="filter-chip active" onclick="filterNotifications('all')">Tout</button>
+            <button class="filter-chip" onclick="filterNotifications('unread')">Non lus</button>
+            <button class="filter-chip" onclick="filterNotifications('course')">Cours</button>
+            <button class="filter-chip" onclick="filterNotifications('assignment')">Devoirs</button>
+         </div>
+         <div class="notifications-list" id="notifications-list">
+            <!-- Notifications seront ici (voir javascript index.js) -->
+         </div>
+      </div>
+      <div class="shrek-head"></div>
+
+      <script src="../../index.js"></script>
+      <script src="homedashboard.css"></script>
+   </body>
+</html>
