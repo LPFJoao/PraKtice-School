@@ -291,7 +291,8 @@ Styles for Main Content
 .promo-video {
 	max-width: 800px;
   	height: auto;
-  	border-radius: 12px;
+	border: solid 5px var(--surface-1);
+  	border-radius: 130px;
  	box-shadow: 
     0 8px 20px rgba(0, 0, 0, 0.3), 
     0 16px 40px rgba(0, 0, 0, 0.2);
@@ -319,7 +320,7 @@ Styles for Main Content
 	justify-content: center;
 	align-items: center;
 	width: 50%;
-	border-left: 6px solid #5d7137;x;
+	border-left: 6px solid #5d7137;
   	border-radius: 16px;
   	box-shadow: 0 8px 24px rgba(93, 113, 55, 0.2);
   	flex: 1;

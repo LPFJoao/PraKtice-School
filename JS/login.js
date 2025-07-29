@@ -40,8 +40,10 @@ function setupPopupEvents() {
   const modal = document.getElementById("login");
   const submitLogin = document.getElementById("submitLogin");
   const container = document.getElementById("login-container");
+  const loginForm = document.getElementById("loginForm");
+  const closeLoginDuplicate = document.getElementById("closeLoginDuplicate");
 
-  if (!openBtn || !closeBtn || !modal || !overlay || !submitLogin  || !container) {
+  if (!openBtn || !closeBtn || !modal || !overlay || !submitLogin  || !container || !loginForm || !closeLoginDuplicate) {
     console.warn("Popup elements not found");
     return;
   }
@@ -54,11 +56,18 @@ function setupPopupEvents() {
     container.classList.remove('open');
   });
 
+  closeLoginDuplicate.addEventListener("click", () => {
+    container.classList.remove('open');
+  });
+
   overlay.addEventListener("click", () => {
     container.classList.remove('open');
   });
 
-
+  submitLogin.addEventListener("click", e => {
+  e.preventDefault();               
+  window.location.href = "../html/profil.html";
+});
   
 
 }   

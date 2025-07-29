@@ -38,7 +38,8 @@
     width: 380px;
   }
 
-  #submitLogin{
+  #submitLogin,
+  #closeLoginDuplicate{
     background-color: var(--c-accent);
     border-radius: 20px;
     border: none;
@@ -115,23 +116,46 @@
         }
 </style>
   
-
   <div id="login-overlay"></div>
 
   <div id="login" class="modal">
-    <button id="closeLogin">×</button>
+    <button type="button" id="closeLogin">×</button>
+
     <div class="login-inner">
-      <h2>PraKtice School</h2><br><br>
-      <div class="form-group">
-      <label for="myText" class="form-label">Username</label>
-      <input type="text" id="myText" class="form-input" placeholder=" Enter your username"><br><br>
-      </div>
-      <div class="form-group">
-      <label for="myText2" class="form-label">Password</label>
-      <input type="password" id="myText2" class="form-input" placeholder=" Enter your password"><br><br>
-      </div>
-      <button id="submitLogin">Login</button>
+      <h2>PraKtice School</h2>
+
+      <form id="loginForm" action="/html/profil.html" method="get">
+        <div class="form-group">
+          <label for="myText" class="form-label">Username</label>
+          <input
+            type="text"
+            id="myText"
+            name="username"
+            class="form-input"
+            placeholder="Enter your username"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="myText2" class="form-label">Password</label>
+          <input
+            type="password"
+            id="myText2"
+            name="password"
+            class="form-input"
+            placeholder="Enter your password"
+            required
+          >
+        </div>
+
+        <div class="form-actions">
+          <!-- type="submit" will navigate to profil.html -->
+          <button type="submit" id="submitLogin">Login</button>
+          <!-- type="button" so it only closes the popup -->
+          <button type="button" id="closeLoginDuplicate">Close</button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
-
