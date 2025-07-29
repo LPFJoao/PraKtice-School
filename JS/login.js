@@ -7,7 +7,7 @@ export function initLoginPopup() {
   }
 
   
-  fetch('../html/login.html')
+  fetch('../PraKtice-School/html/login.html')
     .then(response => {
       if (!response.ok) {
         throw new Error('Failed to load popup content.');
